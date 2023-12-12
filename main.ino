@@ -82,9 +82,11 @@ void loop() {
     }
     else{
       lcd_sampahPenuh();
+      digitalWrite(led_green, HIGH);
       servo1.write(170);
       beep();
       delay(3000);
+      digitalWrite(led_green, LOW);
       lcd.clear();
     }
   }
@@ -94,17 +96,19 @@ void loop() {
       lcd_organik();
       beep();
       servo2.write(19);
-      digitalWrite(led_green, HIGH);
+      digitalWrite(led_red, HIGH);
       delay(3000);
-      digitalWrite(led_green, LOW);
+      digitalWrite(led_red, LOW);
       servo2.write(119);
       lcd.clear();  
     }
     else{
       lcd_sampahPenuh();
       servo2.write(119);
+      digitalWrite(led_red, HIGH);
       beep();
       delay(3000);
+      digitalWrite(led_red, LOW);
       lcd.clear();
     }
   }
@@ -122,9 +126,11 @@ void loop() {
     }
     else{
       lcd_sampahPenuh();
+      digitalWrite(led_green, HIGH);
       servo1.write(170);
       beep();
       delay(3000);
+      digitalWrite(led_green, LOW);
       lcd.clear();
     }
   }
